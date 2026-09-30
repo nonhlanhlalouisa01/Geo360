@@ -1,0 +1,18 @@
+# Optional convenience stack for local development.
+# Cameras still require HTTPS or localhost in the browser.
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      GEOMET360_ALLOWED_ORIGINS: '["http://localhost:5173"]'
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_DEV_API_PROXY: http://backend:8000
+    depends_on:
+      - backend
