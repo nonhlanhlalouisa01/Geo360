@@ -50,6 +50,31 @@ vision below are **not implemented**.
 
 ---
 
+## Preview
+
+Screenshots of the running app (captured from the real frontend talking to the
+real backend). The sample images used are **synthetic test patterns generated
+with NumPy/OpenCV**, not photographs of real ore.
+
+| Starting state | Quality check passed |
+| --- | --- |
+| ![Initial state](docs/screenshots/01-initial-desktop.png) | ![Pass verdict](docs/screenshots/02-pass-verdict.png) |
+
+Note that even when the image-quality check passes, processing readiness still
+reports **Unverified — plant validation required**.
+
+| Measured metrics | Too dark |
+| --- | --- |
+| ![Measured metrics](docs/screenshots/03-metrics-expanded.png) | ![Too dark](docs/screenshots/04-fail-too-dark.png) |
+
+| Blurred | Unsupported file |
+| --- | --- |
+| ![Blurred](docs/screenshots/05-fail-blurred.png) | ![Unsupported file](docs/screenshots/06-unsupported-file.png) |
+
+| Camera permission denied | Mobile layout |
+| --- | --- |
+| ![Camera denied](docs/screenshots/07-camera-denied.png) | ![Mobile](docs/screenshots/08-mobile-initial.png) |
+
 ## Repository layout
 
 ```
